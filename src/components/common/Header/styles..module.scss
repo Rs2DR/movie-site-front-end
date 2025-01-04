@@ -1,0 +1,52 @@
+@use '../../../assets/styles/helpers' as *;
+
+.header {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	background-color: var(--color-dark-gray);
+	position: fixed;
+	top: 0;
+	height: rem(100);
+	padding: 0 rem(70);
+	z-index: 99;
+
+	.navigation {
+		@include flex-center();
+		gap: rem(52);
+
+		.list {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(45);
+			@include fluid-text(20, 24);
+			.item {
+				position: relative;
+
+				> a {
+					color: var(--color-white);
+					text-decoration: none;
+
+					@include link-animation(--color-white);
+
+					&.active {
+						background-color: var(--color-red);
+						border-radius: 60px;
+						padding: 10px 30px;
+						transition: background-color var(--transition-duration) ease;
+
+						&::before {
+							width: 0;
+							transition: none;
+						}
+
+						&:hover {
+							background-color: var(--color-hover-red);
+						}
+					}
+				}
+			}
+		}
+	}
+}

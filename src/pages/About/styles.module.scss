@@ -1,0 +1,47 @@
+@use '../../assets/styles/helpers/' as *;
+
+.about {
+	display: inline-flex;
+	margin-top: rem(70);
+
+	> img {
+		background-position: left;
+		background-size: cover;
+	}
+
+	.description {
+		flex-grow: 1;
+		padding-left: rem(70);
+
+		> h1 {
+			@include fluid-text(96, 96);
+			font-weight: 700;
+			margin-bottom: rem(21);
+		}
+
+		> p {
+			@include fluid-text(20, 20);
+			font-weight: 400;
+		}
+	}
+
+	.statistics {
+		display: inline-flex;
+		gap: rem(107);
+
+		> div {
+			display: flex;
+			flex-direction: column;
+
+			> span:first-child {
+				@include fluid-text(70, 70);
+				font-weight: 400;
+			}
+
+			> span:last-child {
+				@include fluid-text(24, 24);
+				font-weight: 400;
+			}
+		}
+	}
+}

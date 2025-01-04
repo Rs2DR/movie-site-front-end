@@ -1,0 +1,16 @@
+@use '../../../assets/styles/helpers' as *;
+
+.link {
+	color: var(--color-white);
+	background-color: var(--color-red);
+	border-radius: rem(60);
+	padding: rem(10) rem(60);
+	text-decoration: none;
+	font-weight: 500;
+	@include fluid-text(16, 24);
+	transition: background-color var(--transition-duration) ease;
+
+	&:hover {
+		background-color: var(--color-hover-red);
+	}
+}

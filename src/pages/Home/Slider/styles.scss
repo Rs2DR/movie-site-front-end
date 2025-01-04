@@ -1,0 +1,125 @@
+@use '../../../assets/styles/helpers/' as *;
+
+.swiper {
+	position: relative; /* Для позиционирования кнопок */
+	width: 100%;
+	height: rem(730); /* Высота слайдера */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	/* Центровка контента слайда */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Стили для изображений внутри слайдов */
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Кнопка "предыдущий" */
+.swiper-button-prev {
+	width: rem(48);
+	height: rem(48);
+	background-image: url('../../../assets/icons/prev-icon.svg'); /* Иконка */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	bottom: 0;
+	left: 40%;
+	bottom: 5%;
+	top: unset;
+	z-index: 11;
+}
+
+/* Кнопка "следующий" */
+.swiper-button-next {
+	width: rem(48);
+	height: rem(48);
+	background-image: url('../../../assets/icons/next-icon.svg'); /* Иконка */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	right: 40%;
+	bottom: 5%;
+	top: unset;
+	z-index: 11;
+}
+
+/* Эффект при наведении */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+	opacity: 0.8; /* Легкое затемнение при наведении */
+}
+
+/* Убираем стандартные иконки Swiper.js */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	display: none; /* Полностью скрываем стандартные стрелки */
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+	bottom: 6%;
+}
+
+.swiper-pagination {
+	&-bullet {
+		border-radius: 0;
+		width: rem(46);
+		height: rem(4);
+		background-color: var(--color-gray);
+
+		&-active {
+			background-color: var(--color-white);
+		}
+	}
+}
+
+.first-slide {
+	background-image: url('../../../assets/images/first-slide.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: rem(40);
+	color: var(--color-white);
+
+	h1 {
+		text-align: left;
+		margin: 0 rem(20) rem(25) 0;
+	}
+}
+
+.second-slide {
+	background-image: url('../../../assets/images/second-slide.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: rem(40);
+	color: var(--color-white);
+
+	h1 {
+		text-align: left;
+		margin: 0 rem(20) rem(25) 0;
+	}
+}

@@ -1,0 +1,101 @@
+@use '../../../assets/styles/helpers' as *;
+
+.footer {
+	width: 100%;
+	height: rem(530);
+	background-color: var(--color-dark-gray);
+	margin-top: rem(70);
+	display: flex;
+	justify-content: space-between;
+	gap: rem(770);
+	line-height: 1;
+	padding: rem(60) rem(70) 0 rem(70);
+
+	a {
+		color: var(--color-gray);
+		text-decoration: none;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	div:first-child {
+		display: flex;
+		flex-direction: column;
+
+		> span {
+			color: var(--color-gray);
+			@include fluid-text(18, 18);
+			white-space: nowrap;
+			font-weight: 400;
+			margin-bottom: rem(32);
+		}
+
+		.platforms {
+			display: inline-flex;
+			gap: rem(20);
+			margin-bottom: rem(32);
+		}
+
+		> a {
+			display: contents;
+			> img {
+				width: rem(96);
+				margin-bottom: rem(95);
+			}
+		}
+
+		.media {
+			display: inline-flex;
+			gap: rem(40);
+			margin-bottom: rem(54);
+
+			> a {
+				@include fluid-text(40, 40);
+			}
+		}
+
+		.additional {
+			display: inline-flex;
+			gap: rem(20);
+			> li {
+				@include fluid-text(18, 18);
+				white-space: nowrap;
+				font-weight: 400;
+				position: relative;
+
+				> a {
+					@include link-animation(--color-gray);
+				}
+			}
+		}
+	}
+	> div:last-child {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(157);
+
+		h5 {
+			margin: 0 0 rem(18) 0;
+			@include fluid-text(24, 32);
+		}
+
+		.chapter {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: rem(28);
+
+			> li {
+				white-space: nowrap;
+				@include fluid-text(18, 18);
+				position: relative;
+
+				> a {
+					@include link-animation(--color-gray);
+				}
+			}
+		}
+	}
+}

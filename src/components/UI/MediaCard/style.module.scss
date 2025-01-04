@@ -1,0 +1,51 @@
+@use '../../../assets/styles/helpers' as *;
+
+.card {
+	position: relative;
+	width: rem(231);
+	height: rem(348);
+	border-radius: rem(4);
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 33.33%; /* Нижняя треть */
+		background: rgba(0, 0, 0, 0.5); /* Полупрозрачный темный фон */
+		border-bottom-left-radius: rem(4);
+		border-bottom-right-radius: rem(4);
+	}
+
+	.poster {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.info {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: rem(10);
+		color: #fff;
+		text-align: center;
+		z-index: 1; /* Чтобы текст был сверху */
+		margin-bottom: 0; /* Убираем маргин снизу */
+
+		.title {
+			font-size: rem(16);
+			font-weight: bold;
+			margin-bottom: rem(5);
+		}
+
+		.type,
+		.year {
+			font-size: rem(14);
+			margin-bottom: rem(5);
+		}
+	}
+}

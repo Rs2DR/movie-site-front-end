@@ -1,0 +1,18 @@
+@use 'helpers' as *;
+
+:root {
+	--color-white: #ffffff;
+
+	--color-black: #000000b2;
+
+	--color-gray: #797979;
+	--color-dark-gray: #191919;
+	--color-light-gray: #a7a7a7;
+
+	--color-red: #e13c52;
+	--color-hover-red: #c73f51;
+
+	--font-family-base: 'Ubuntu', sans-serif;
+
+	--transition-duration: 0.2s;
+}

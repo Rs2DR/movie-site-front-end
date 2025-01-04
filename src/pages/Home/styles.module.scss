@@ -1,0 +1,18 @@
+@use '../../assets/styles/helpers/' as *;
+
+.main {
+	color: var(--color-white);
+	display: flex;
+	flex-direction: column;
+	padding-top: rem(100);
+
+	.container {
+		padding: rem(40) rem(70) 0 rem(70);
+
+		> div {
+			@include flex-center();
+			gap: rem(26);
+			margin-top: rem(25);
+		}
+	}
+}
